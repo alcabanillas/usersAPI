@@ -90,38 +90,14 @@
             }
           }
         }
-      }
-    },
-    "/users/{userId}": {
-      "delete": {
-        "summary": "Delete a JSONPlaceholder user",
-        "description": "Delete a JSONPlaceholder user",
-        "parameters": [
-          {
-            "in": "path",
-            "name": "userId",
-            "required": true,
-            "description": "Numeric ID of the user to retrieve.",
-            "schema": {
-              "type": "integer"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Deleted user"
-          }
-        }
-      }
-    },
-    "/users/{userId}": {
+      },
       "put" : {
         "summary":"Put a JSONPlaceholder user.",
         "description": "Change a JSONPlaceholder user",
         "parameters": [
           {
             "in": "path",
-            "name": "userId",
+            "name": "id",
             "required": true,
             "description": "Numeric ID of the user to retrieve.",
             "schema": {
@@ -132,6 +108,26 @@
         "responses": {
           "200": {
             "description": "User changed"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a JSONPlaceholder user",
+        "description": "Delete a JSONPlaceholder user",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Numeric ID of the user to retrieve.",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Deleted user"
           }
         }
       }
